@@ -3,7 +3,9 @@ package com.retro.dailyRetro.board.service;
 import com.retro.dailyRetro.board.entity.Board;
 import com.retro.dailyRetro.board.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class BoardService {
     @Autowired
     private BoardRepository boardRepository;
