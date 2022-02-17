@@ -5,6 +5,9 @@ import com.retro.dailyRetro.board.repository.BoardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class BoardService {
     @Autowired
@@ -12,5 +15,9 @@ public class BoardService {
 
     public void insertBoard(Board board){
         boardRepository.save(board);
+    }
+
+    public List<Board> getDailyBoard(String date){
+       return boardRepository.findByCreateDate(date);
     }
 }
