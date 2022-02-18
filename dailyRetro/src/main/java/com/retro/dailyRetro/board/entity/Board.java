@@ -13,6 +13,7 @@ public class Board {
     private String email;
     private String emoji;
     private String quest;
+    private String quest_answer;
     private String contents;
     private String createDate;
 }

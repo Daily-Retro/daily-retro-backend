@@ -22,7 +22,7 @@ public class BoardController {
     }
 
     @GetMapping("/getDailyboard/{date}")
-    public List<Board> getDailyboard (@PathVariable("date") String date){
-        return boardService.getDailyBoard(date);
+    public List<?> getDailyboard (@PathVariable("date") String date, @RequestHeader("email") String email){
+        return boardService.getDailyBoard(date,email);
     }
 }
